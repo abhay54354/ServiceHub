@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professional One-Page Website</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      transition: background-color 2s ease;
+    }
+
+    /* Header / Navbar */
+    header {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px 50px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* Search Bar */
+    .search-bar {
+      margin: 40px auto;
+      display: flex;
+      justify-content: center;
+      max-width: 400px;
+      background: white;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      flex: 1;
+    }
+
+    .search-bar button {
+      background: #333;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+
+    .search-bar button:hover {
+      background: #555;
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 20px;
+    }
+
+    .feature {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      width: 200px;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .feature i {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .feature:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-5px);
+    }
+
+    /* Button Section */
+    .buttons {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .buttons button {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 2px solid white;
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .buttons button:hover {
+      background: white;
+      color: #333;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .feature {
+        width: 100%;
+      }
+
+      .search-bar {
+        flex-direction: column;
+      }
+
+      .search-bar input,
+      .search-bar button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <div class="logo"><i class="fas fa-globe"></i> MyWebsite</div>
+    <nav>
+      <a href="#"><i class="fas fa-home"></i> Home</a>
+      <a href="#"><i class="fas fa-info-circle"></i> About</a>
+      <a href="#"><i class="fas fa-phone"></i> Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to My Website</h1>
+    <p>A clean, professional, one-page site with HTML, CSS, and JavaScript – all in one file.</p>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search something..." />
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature">
+      <i class="fas fa-user"></i>
+      <p>User Profiles</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-bolt"></i>
+      <p>Fast Performance</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-shield-alt"></i>
+      <p>Secure Access</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-cogs"></i>
+      <p>Easy Customization</p>
+    </div>
+  </section>
+
+  <!-- Button Section -->
+  <section class="buttons">
+    <button>Login</button>
+    <button>Sign Up</button>
+    <button>Learn More</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 MyWebsite. All rights reserved.
+  </footer>
+
+  <!-- JavaScript for Background Color Animation -->
+  <script>
+    const colors = ['#4a90e2', '#ff6f61', '#7ed6df', '#badc58', '#f6e58d', '#e056fd', '#686de0'];
+    let i = 0;
+
+    function changeBackground() {
+      document.body.style.backgroundColor = colors[i];
+      i = (i + 500) % colors.length;
+    }
+
+    setInterval(changeBackground, 4000);
+    changeBackground();
+  </script>
+</body>
+</html>
