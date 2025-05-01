@@ -115,11 +115,19 @@
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required>
 
-        <button href="web.html" type="submit">Login</button>
+        <button type="submit">Login</button>
 
         <p>Don't have an account? <a href="register.html">Register here</a></p>
         <p><a href="change_password.html">Forgot password?</a></p>
       </form>
+
+      <script>
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form from submitting
+    // Optional: You can add fake validation here if needed
+    window.location.href = 'web.html'; // Redirect to web.html
+  });
+</script>
     </div>
   </div>
 
