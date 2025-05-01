@@ -22,16 +22,21 @@ nav {
 }
 
 /* Logo Styling */
-.logo-container .logo {
-  height: 60px;  /* Adjust size as needed */
-  width: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
+header {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
 
-.logo-container .logo:hover {
-  transform: scale(1.1);
-}
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+    }
+
 
 /* Menu Button */
 .menu-btn {
@@ -399,9 +404,9 @@ footer .social-icons {
 </style>
 <body>
 <nav>
-        <div class="logo-container">
-            
-        </div>
+        <header>
+    <div class="logo">SERVICE HUB</div>
+      </header>
 
         <button class="menu-btn">Menu</button>
         <div class="dropdown">
