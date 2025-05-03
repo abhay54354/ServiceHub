@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Hub | Register</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f9;
+    }
+
+    header {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .home-button {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: 2px solid #fff;
+      border-radius: 8px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .home-button:hover {
+      background: #fff;
+      color: #2c5364;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 80px);
+      padding-top: 60px;
+    }
+
+    .register-box {
+      background-color: #ffffff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .register-box h2 {
+      margin-bottom: 25px;
+      font-size: 28px;
+      color: #2c5364;
+    }
+
+    .register-box label {
+      display: block;
+      text-align: left;
+      margin: 10px 0 5px;
+      font-weight: 500;
+    }
+
+    .register-box input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    .register-box button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: #2c5364;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .register-box button:hover {
+      background: #203a43;
+    }
+
+    .register-box p {
+      font-size: 14px;
+      margin-top: 15px;
+    }
+
+    .register-box a {
+      color: #203a43;
+      text-decoration: none;
+    }
+
+    .register-box a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">SERVICE HUB</div>
+    <a class="home-button" href="web.html">Home</a>
+  </header>
+
+  <div class="container">
+    <div class="register-box">
+      <h2>Create Your Account</h2>
+      <form action="register.php" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Register</button>
+
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+      </form>
+    </div>
+  </div>
+
+<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Get values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value;
+
+    if (!name || !email || !username || !password) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    // Save user in localStorage
+    const user = {
+      name,
+      email,
+      username,
+      password
+    };
+    localStorage.setItem("registeredUser", JSON.stringify(user));
+
+    alert("Registration successful! Redirecting to login page...");
+    window.location.href = "index.html";
+  });
+</script>
+
+
+</body>
+</html>
