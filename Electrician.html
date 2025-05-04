@@ -6,35 +6,116 @@
   <title>Electrician Services | Service Hub</title>
   <style>
 
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* Base Reset */
+* {
   margin: 0;
-  background: #f9f9f9;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #203a43;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
   padding: 15px 30px;
-  color: white;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.5em;
+/* Logo Styling */
+header {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+
+/* Menu Button */
+.menu-btn {
+  display: none;
+  background-color: #fff;
+  color: #2c5364;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.nav a {
-  color: white;
-  margin-left: 20px;
+.menu-btn:hover {
+  background-color: #ddd;
+}
+
+/* Dropdown Links */
+.dropdown {
+  display: flex;
+  gap: 25px;
+}
+
+.dropdown a {
+  color: #fff;
   text-decoration: none;
+  font-size: 17px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  position: relative;
 }
 
-.nav a:hover {
-  text-decoration: underline;
+.dropdown a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: #00c6ff;
+  transition: 0.4s;
+}
+
+.dropdown a:hover::after {
+  width: 100%;
+}
+
+.dropdown a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background: #2c5364;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .dropdown.show {
+    display: flex;
+  }
 }
 
 .service-detail {
@@ -105,16 +186,20 @@ body {
 </style>
 </head>
 <body>
-  <header class="header">
+ <nav>
+        <header>
     <div class="logo">SERVICE HUB</div>
-    <nav class="nav">
-      <a href="web.html">Home</a>
-      <a href="#services">Services</a>
-      <a href="about.html">About</a>
-      <a href="#contact">Contact</a>
-      <a href="index.html">Login</a>
-    </nav>
-  </header>
+      </header>
+
+        <button class="menu-btn">Menu</button>
+        <div class="dropdown">
+            <a href="web.html">Home</a>
+            <a href="#services">Services</a>
+            <a href="aboutuspage.html">About</a>
+            <a href="#contact">Contact</a>
+            <a href="index.html">Login</a>
+        </div>
+</nav>
 
   <section class="service-detail">
     <div class="card">
