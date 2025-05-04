@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electrician Services | Service Hub</title>
+  <style>
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #203a43;
+  padding: 15px 30px;
+  color: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.service-detail {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.service-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card h2 {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #203a43;
+}
+
+.card p {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.service-list {
+  text-align: left;
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.service-list li {
+  margin-bottom: 10px;
+}
+
+.btn {
+  background: #203a43;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #2c5364;
+}
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #203a43;
+  color: white;
+  margin-top: 40px;
+}
+
+
+</style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">SERVICE HUB</div>
+    <nav class="nav">
+      <a href="web.html">Home</a>
+      <a href="#services">Services</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+      <a href="index.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="service-detail">
+    <div class="card">
+      <img src="https://images.pexels.com/photos/2898199/pexels-photo-2898199.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Electrician at work" class="service-image" />
+      <h2>Electrician Services</h2>
+      <p>We offer professional electrical repair and installation services for residential, commercial, and industrial needs. Our certified electricians are equipped with modern tools and safety gear to ensure top-notch and secure services.</p>
+
+      <ul class="service-list">
+        <li>Wiring and rewiring</li>
+        <li>Electrical panel upgrades</li>
+        <li>Lighting installation</li>
+        <li>Ceiling fan installation</li>
+        <li>Appliance hookups</li>
+        <li>Emergency repair services</li>
+      </ul>
+
+      <button class="btn" id="bookBtn">Book Now</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Service Hub. All rights reserved.</p>
+  </footer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+  const bookBtn = document.getElementById("bookBtn");
+
+  bookBtn.addEventListener("click", () => {
+    alert("Booking Successful! Our electrician will contact you shortly.");
+  });
+});
+
+
+</script >
+</body>
+</html>
