@@ -223,7 +223,14 @@ header {
   <footer class="footer">
     <p>&copy; 2025 Service Hub. All rights reserved.</p>
   </footer>
+<script>
+  const menuBtn = document.querySelector(".menu-btn");
+  const dropdown = document.querySelector(".dropdown");
 
+  menuBtn.addEventListener("click", () => {
+    dropdown.classList.toggle("show");
+  });
+</script>
 <script>
 
 document.addEventListener("DOMContentLoaded", () => {
